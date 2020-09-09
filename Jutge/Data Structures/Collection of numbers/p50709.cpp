@@ -12,9 +12,9 @@ int main(){
 */
 	M m; 
 	char a;
-	while(cin >> a){
+	while(cin >> a){ // Cost: Θ (M * log(n)). sent M la mida de les dades del input.  
 		if(a == 'S'){
-			// 'S' x : Guarda una copia del numero x donat. 
+			// 'S' x : Guarda una copia del numero x donat. Cost : Θ (log(n)).
 			int x;
 			cin >> x;
 			if(m.find(x) == m.end()){
@@ -27,7 +27,7 @@ int main(){
 			}
 		}
 		else if(a == 'A'){
-			// 'A' : Consulta el numero mes gran i l'escriu per pantalla.
+			// 'A' : Consulta el numero mes gran i l'escriu per pantalla. Cost : Θ (1).
 			if( !m.empty() ){
 				auto it = m.end();
 				--it;
@@ -38,7 +38,7 @@ int main(){
 			}
 		}
 		else if(a == 'R'){
-			// 'R' : Elimina una copia del nombre mes gran. 
+			// 'R' : Elimina una copia del nombre mes gran. Cost : Θ (log(n)).
 			if( !m.empty() ){
 				auto it = m.end();
 				--it;
@@ -58,7 +58,7 @@ int main(){
 		else if(a == 'I'){
 			/* 
 				'I' x : S'esborra una copia del nombre mes gran i s'insereix el nou nombre 
-				incrementat en x.
+				incrementat en x. Cost : Θ (log(n)).
 			*/
 			int x;
 			cin >> x;
@@ -86,7 +86,7 @@ int main(){
 		else if(a == 'D'){
 			/* 
 				'D' x : S'esborra una copia del nombre mes gran i s'insereix el nou nombre 
-				decrementat en x.
+				decrementat en x. Cost : Θ (log(n)).
 			*/ 
 			int x;
 			cin >> x;
