@@ -34,7 +34,7 @@ int main(){
 				cout << it->first << endl;
 			}
 			else{
-				cout << "error!" << endl;
+				cout << "error!" << endl; // Missatge d'error quan la col·leccio esta buida.
 			}
 		}
 		else if(a == 'R'){
@@ -56,6 +56,10 @@ int main(){
 			
 		}
 		else if(a == 'I'){
+			/* 
+				'I' x : S'esborra una copia del nombre mes gran i s'insereix el nou nombre 
+				incrementat en x.
+			*/
 			int x;
 			cin >> x;
 			if( !m.empty() ){
@@ -80,6 +84,10 @@ int main(){
 			}
 		}
 		else if(a == 'D'){
+			/* 
+				'D' x : S'esborra una copia del nombre mes gran i s'insereix el nou nombre 
+				decrementat en x.
+			*/ 
 			int x;
 			cin >> x;
 			if( !m.empty()){
